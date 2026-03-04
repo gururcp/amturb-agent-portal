@@ -136,4 +136,4 @@ merchantSchema.pre('save', function(next) {
   this.updatedAt = Date.now();
   next();
 });
-module.exports = mongoose.models.Merchant || mongoose.model('Merchant', merchantSchema);
+module.exports = mongoose.models.merchant || mongoose.model('merchant', merchantSchema);
