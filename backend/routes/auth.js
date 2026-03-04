@@ -6,7 +6,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const User = require('../models/user'); // ← CHANGED TO LOWERCASE
 const authMiddleware = require('../middleware/auth');
-const ownerOnly = require('../middleware/owneronly');
+const owneronly = require('../middleware/owneronly');
 // ============================================================
 // POST /api/auth/login
 // ============================================================
@@ -152,7 +152,7 @@ router.patch('/change-pin', authMiddleware, async (req, res) => {
 // ============================================================
 // PATCH /api/auth/reset-pin/:id
 // ============================================================
-router.patch('/reset-pin/:id', authMiddleware, ownerOnly, async (req, res) => {
+router.patch('/reset-pin/:id', authMiddleware, owneronly, async (req, res) => {
   try {
     const { newPin } = req.body;
     const userId = req.params.id;

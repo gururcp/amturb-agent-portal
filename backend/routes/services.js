@@ -6,7 +6,7 @@ const router = express.Router();
 const Service = require('../models/service');
 const Merchant = require('../models/merchant');
 const authMiddleware = require('../middleware/auth');
-const ownerOnly = require('../middleware/owneronly');
+const owneronly = require('../middleware/owneronly');
 // GET /api/services - Get all active services
 router.get('/', authMiddleware, async (req, res) => {
   try {
@@ -26,7 +26,7 @@ router.get('/', authMiddleware, async (req, res) => {
   }
 });
 // POST /api/services - Create new service (owner only)
-router.post('/', authMiddleware, ownerOnly, async (req, res) => {
+router.post('/', authMiddleware, owneronly, async (req, res) => {
   try {
     const { name, description } = req.body;
     if (!name) {
@@ -56,7 +56,7 @@ router.post('/', authMiddleware, ownerOnly, async (req, res) => {
   }
 });
 // PATCH /api/services/:id - Update service (owner only)
-router.patch('/:id', authMiddleware, ownerOnly,async (req, res) => {
+router.patch('/:id', authMiddleware, owneronly,async (req, res) => {
   try {
     const { name, description } = req.body;
     const service = await Service.findById(req.params.id);
@@ -80,7 +80,7 @@ router.patch('/:id', authMiddleware, ownerOnly,async (req, res) => {
   }
 });
 // PATCH /api/services/:id/toggle - Activate/deactivate service (owner only)
-router.patch('/:id/toggle', authMiddleware, ownerOnly, async (req, res) => {
+router.patch('/:id/toggle', authMiddleware, owneronly, async (req, res) => {
   try {
     const service = await Service.findById(req.params.id);
     if (!service) {
@@ -102,7 +102,7 @@ router.patch('/:id/toggle', authMiddleware, ownerOnly, async (req, res) => {
   }
 });
 // GET /api/services/:slug/merchants - Get merchants interested in service (owner only)
-router.get('/:slug/merchants', authMiddleware, ownerOnly, async (req, res) => {
+router.get('/:slug/merchants', authMiddleware, owneronly, async (req, res) => {
   try {
     const { page = 1, limit = 20 } = req.query;
     const service = await Service.findOne({ slug: req.params.slug });

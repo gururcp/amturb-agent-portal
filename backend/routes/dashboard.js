@@ -7,7 +7,7 @@ const Merchant = require('../models/merchant');
 const User = require('../models/user');
 const Service = require('../models/service');
 const authMiddleware = require('../middleware/auth');
-const ownerOnly = require('../middleware/owneronly');
+const owneronly = require('../middleware/owneronly');
 // GET /api/dashboard/agent - Agent dashboard stats
 router.get('/agent', authMiddleware, async (req, res) => {
   try {
@@ -75,7 +75,7 @@ router.get('/agent', authMiddleware, async (req, res) => {
   }
 });
 // GET /api/dashboard/owner - Owner dashboard stats
-router.get('/owner', authMiddleware, ownerOnly, async (req, res) => {
+router.get('/owner', authMiddleware, owneronly, async (req, res) => {
   try {
     const today = new Date();
     today.setHours(0, 0, 0, 0);

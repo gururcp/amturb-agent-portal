@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Merchant = require('../models/merchant');
 const authMiddleware = require('../middleware/auth');
-const ownerOnly = require('../middleware/ownerOnly');
+const owneronly = require('../middleware/owneronly');
 // GET /api/merchants
 router.get('/', authMiddleware, async (req, res) => {
   try {
@@ -162,7 +162,7 @@ router.post('/:id/visit-log', authMiddleware, async (req, res) => {
   }
 });
 // POST /api/merchants/:id/owner-note (Owner only)
-router.post('/:id/owner-note', authMiddleware, ownerOnly, async (req, res) => {
+router.post('/:id/owner-note', authMiddleware, owneronly, async (req, res) => {
   try {
     const { note } = req.body;
     const merchant = await Merchant.findById(req.params.id);
@@ -198,7 +198,7 @@ router.patch('/:id/status', authMiddleware, async (req, res) => {
   }
 });
 // DELETE /api/merchants/:id (Owner only - soft delete)
-router.delete('/:id', authMiddleware, ownerOnly, async (req, res) => {
+router.delete('/:id', authMiddleware, owneronly, async (req, res) => {
   try {
     const merchant = await Merchant.findById(req.params.id);
     if (!merchant) {

@@ -6,9 +6,9 @@ const router = express.Router();
 const User = require('../models/user');
 const Merchant = require('../models/merchant');
 const authMiddleware = require('../middleware/auth');
-const ownerOnly = require('../middleware/owneronly');
+const owneronly = require('../middleware/owneronly');
 // All routes are owner-only
-router.use(authMiddleware, ownerOnly);
+router.use(authMiddleware, owneronly);
 // GET /api/agents - List all agents
 router.get('/', async (req, res) => {
   try {
