@@ -1,0 +1,142 @@
+.agent-merchants-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 80px;
+}
+.page-header {
+  background: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #032360;
+  margin: 0;
+}
+.header-stats span {
+  font-size: 14px;
+  color: #888888;
+}
+.search-filter-bar {
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 12px;
+}
+.search-form {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+.search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Baloo 2', cursive;
+}
+.search-btn {
+  padding: 10px 20px;
+  background: #032360;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filter-select {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Baloo 2', cursive;
+  background: #ffffff;
+}
+.merchants-list {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.merchant-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+.merchant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.merchant-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 4px 0;
+}
+.owner-name {
+  font-size: 14px;
+  color: #888888;
+  margin: 0 0 4px 0;
+}
+.phone {
+  font-size: 13px;
+  color: #032360;
+  margin: 0;
+}
+.address {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+.next-visit {
+  font-size: 12px;
+  color: #032360;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+.btn-action {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+}
+.btn-view {
+  background: #f5f5f5;
+  color: #032360;
+  border: 1px solid #032360;
+}
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+.empty-state p {
+  font-size: 16px;
+  color: #888888;
+  margin-bottom: 20px;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}

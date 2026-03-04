@@ -1,0 +1,372 @@
+.agent-dashboard {
+  min-height: 100vh;
+  background: #ffffff;
+  padding-bottom: 80px; /* Space for bottom nav */
+  font-family: 'Baloo 2', cursive;
+}
+/* Top Bar */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.wordmark {
+  font-size: 20px;
+  font-weight: 600;
+  color: #032360;
+  margin: 0;
+}
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #032360;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+.user-name {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+}
+/* Stat Grid */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px 20px;
+}
+.stat-tile {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  border-left: 3px solid #032360;
+}
+.stat-tile-soundbox {
+  border-left-color: #be0003;
+}
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #032360;
+  margin-bottom: 4px;
+}
+.stat-tile-soundbox .stat-number {
+  color: #be0003;
+}
+.stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* Overdue Banner */
+.overdue-banner {
+  margin: 0 20px 20px;
+  background: #032360;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+}
+.banner-header {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.overdue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.overdue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+.overdue-info {
+  flex: 1;
+}
+.merchant-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.overdue-days {
+  font-size: 12px;
+  opacity: 0.9;
+}
+.btn-whatsapp-small {
+  padding: 8px 16px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* Today's Follow-ups */
+.today-followups {
+  padding: 0 20px 20px;
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #032360;
+  margin-bottom: 12px;
+}
+.followup-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.followup-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+.followup-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.followup-info {
+  flex: 1;
+}
+.business-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 4px;
+}
+.owner-name {
+  font-size: 13px;
+  color: #888888;
+  margin-bottom: 6px;
+}
+.scheduled-time {
+  font-size: 12px;
+  color: #032360;
+  font-weight: 500;
+}
+.btn-whatsapp {
+  padding: 10px 20px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/* Merchants Section */
+.merchants-section {
+  padding: 0 20px 20px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.btn-view-all {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  color: #032360;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.merchant-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.merchant-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.merchant-card-main {
+  padding: 16px;
+  cursor: pointer;
+}
+.merchant-card-main:active {
+  background: #f5f5f5;
+}
+.merchant-info .business-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 4px;
+}
+.merchant-info .owner-name {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 8px;
+}
+.merchant-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.phone {
+  font-size: 13px;
+  color: #333333;
+}
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.status-onboarded {
+  background: #032360;
+  color: #ffffff;
+}
+.status-new,
+.status-contacted {
+  background: #f5f5f5;
+  color: #333333;
+}
+.next-visit {
+  font-size: 12px;
+  color: #032360;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.gps-label {
+  font-size: 12px;
+  color: #888888;
+}
+/* Merchant Actions */
+.merchant-actions {
+  border-top: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  background: #f5f5f5;
+}
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.btn-action {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+.btn-action.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+}
+.btn-action.btn-note {
+  background: #032360;
+  color: #ffffff;
+}
+.btn-action.btn-edit {
+  background: #ffffff;
+  color: #032360;
+  border: 1px solid #032360;
+}
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.note-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 14px;
+  resize: vertical;
+  background: #ffffff;
+}
+.btn-save-note {
+  padding: 10px 20px;
+  background: #032360;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-save-note:disabled {
+  background: #888888;
+  cursor: not-allowed;
+}
+/* FAB Button */
+.fab-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #be0003;
+  color: #ffffff;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(190, 0, 3, 0.4);
+  z-index: 50;
+}
+.fab-button:active {
+  transform: scale(0.95);
+}
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #888888;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top-color: #032360;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

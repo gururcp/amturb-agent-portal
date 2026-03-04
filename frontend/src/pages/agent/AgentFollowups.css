@@ -1,0 +1,94 @@
+.agent-followups-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 80px;
+}
+.tabs-container {
+  display: flex;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+.tab {
+  flex: 1;
+  padding: 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888888;
+  cursor: pointer;
+  position: relative;
+}
+.tab.active {
+  color: #032360;
+  border-bottom-color: #032360;
+}
+.tab .badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  background: #be0003;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.followups-list {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.followup-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.followup-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0 0 4px 0;
+}
+.owner-name {
+  font-size: 14px;
+  color: #888888;
+  margin: 0 0 4px 0;
+}
+.phone {
+  font-size: 13px;
+  color: #032360;
+  margin: 0 0 4px 0;
+}
+.visit-date {
+  font-size: 12px;
+  color: #666666;
+  margin: 0;
+}
+.days-overdue {
+  font-size: 12px;
+  color: #be0003;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+.btn-whatsapp {
+  padding: 10px 20px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888888;
+}
