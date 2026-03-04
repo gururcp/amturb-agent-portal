@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Merchant = require('../models/Merchant');
+const Merchant = require('../models/merchant');
 const authMiddleware = require('../middleware/auth');
 const ownerOnly = require('../middleware/ownerOnly');
 // GET /api/merchants
